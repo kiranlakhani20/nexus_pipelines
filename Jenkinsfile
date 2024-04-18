@@ -50,7 +50,7 @@ pipeline {
                     
                     createTag nexusInstanceId: 'nexus', tagAttributesJson: '''{"repos": ["maven-releases"] }''', tagName: tagName
              
-             
+             echo 'tagName is $tagName'
              nexusPublisher nexusInstanceId: 'nexus', nexusRepositoryId: 'maven-releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'servicenow_'+env.BUILD_ID+".jar"]], mavenCoordinate: [artifactId: 'servicenow', groupId: 'com.servicenow', packaging: 'jar', version: '1.1']]], tagName: tagName
              
                                   
