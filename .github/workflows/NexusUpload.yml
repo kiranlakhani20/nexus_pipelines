@@ -18,7 +18,7 @@ jobs:
     - name: Nexus Repo Publish
       uses: sampath-methuku-servicenow/nexus-repo-github-action@master
       with:
-        serverUrl: 'http://3.107.49.247:8081/'
+        serverUrl: 'http://localhost:8081/'
         username: admin
         password: admin
         format: maven2
