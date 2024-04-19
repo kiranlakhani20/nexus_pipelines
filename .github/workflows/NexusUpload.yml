@@ -1,9 +1,7 @@
 name: NexusUploadArtifact
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   upload_to_nexus:
